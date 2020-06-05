@@ -25,7 +25,7 @@ def get_jobs(keyword, num_jobs, verbose, path, slp_time):
     driver = webdriver.Chrome(executable_path=path, options=options)
     driver.set_window_size(1120, 1000)
     
-    url = 'https://www.glassdoor.com/Job/jobs.htm?suggestCount=0&suggestChosen=false&clickSource=searchBtn&typedKeyword="' + keyword + '"&sc.keyword="data+scientist"&locT=&locId=&jobType='
+    url = 'https://www.glassdoor.com/Job/jobs.htm?suggestCount=0&suggestChosen=false&clickSource=searchBtn&typedKeyword="' + keyword + '"&sc.keyword="' + keyword + '"&locT=&locId=&jobType='
     driver.get(url)
     jobs = []
 
