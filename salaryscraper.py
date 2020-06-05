@@ -3,7 +3,8 @@
 """
 Created on Thu Jun  4 20:29:36 2020
 
-@author: john
+@author: arapfaik
+url: https://github.com/arapfaik/scraping-glassdoor-selenium
 """
 # %%
 from selenium.common.exceptions import NoSuchElementException, ElementClickInterceptedException
@@ -77,7 +78,7 @@ def get_jobs(keyword, num_jobs, verbose, path, slp_time):
                     job_description = driver.find_element_by_xpath('.//div[@class="jobDescriptionContent desc"]').text
                     collected_successfully = True
                 except:
-                    time.sleep(5)
+                    time.sleep(2)
 
             try:
                 salary_estimate = driver.find_element_by_xpath('.//span[@class="gray salary"]').text
